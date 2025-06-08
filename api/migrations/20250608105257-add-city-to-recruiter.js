@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.addColumn('recruiter_profiles', 'city', {
@@ -8,7 +6,7 @@ module.exports = {
     });
   },
 
-  down: async (queryInterface, Sequelize) => {
+  down: async (queryInterface) => {
     await queryInterface.removeColumn('recruiter_profiles', 'city');
   },
 };
